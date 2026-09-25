@@ -1,0 +1,16 @@
+Issue: tstack/lnav #1741
+
+Environment:
+Linux Mint / Ubuntu 24.04 base
+
+Observed:
+1. Interactive command:
+   :goto 4000
+   Result: works, lands at L4000 (~80%).
+
+2. filename:line syntax:
+   lnav synthetic-500.log:400
+   Result: opens near end of file, L499 / 100%.
+
+Conclusion:
+The two navigation methods behave differently in this synthetic syslog test.
