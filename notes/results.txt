@@ -14,3 +14,12 @@ Observed:
 
 Conclusion:
 The two navigation methods behave differently in this synthetic syslog test.
+
+3. Command-line goto:
+   lnav -c ':goto 4000' synthetic.log
+   Result: does not land at line 4000.
+   Observed position: approximately L4990 / 100%.
+
+Conclusion:
+Interactive :goto behaves differently from command-line -c ':goto NNN'
+and filename:line navigation with the synthetic syslog test.
